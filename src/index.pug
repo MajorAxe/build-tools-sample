@@ -1,0 +1,40 @@
+html
+    head
+        title Todo App
+        // <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        link(rel='stylesheet', href='style.css', type='text/css', media='screen', charset='utf-8')
+    body
+        .container
+            p
+                label(for='new-task') Add Item
+                input#new-task(type='text')
+                button Add
+            h3 Todo
+            ul#incomplete-tasks
+                li
+                    input(type='checkbox')
+                    label Learn npm scripts
+                    input(type='text')
+                    button.edit Edit
+                    button.delete Delete
+                li
+                    input(type='checkbox')
+                    label Learn grunt
+                    input(type='text', value='Go Shopping')
+                    button.edit Edit
+                    button.delete Delete
+                li
+                    input(type='checkbox')
+                    label Learn gulp
+                    input(type='text', value='Go Shopping')
+                    button.edit Edit
+                    button.delete Delete
+            h3 Completed
+            ul#completed-tasks
+                li
+                    input(type='checkbox', checked='')
+                    label Learn some history
+                    input(type='text')
+                    button.edit Edit
+                    button.delete Delete
+        script(type='text/javascript', src='app.js')
