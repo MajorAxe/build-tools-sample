@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 let taskInput = document.getElementById('new-task');
 let addButton = document.getElementsByTagName('button')[0];
 let incompleteTaskHolder = document.getElementById('incomplete-tasks');
@@ -32,7 +34,8 @@ let createNewTaskElement = (taskString) => {
 };
 
 let addTask = function() {
-  let listItem = createNewTaskElement(taskInput.value);
+  let currentDate = moment(new Date()).format('MM/DD/YYYY');
+  let listItem = createNewTaskElement(`${taskInput.value} ${currentDate}`);
 
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
