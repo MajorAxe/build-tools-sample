@@ -1,7 +1,7 @@
-var taskInput = document.getElementById('new-task');//Add a new task.
-var addButton = document.getElementsByTagName('button')[0];//first button
-var incompleteTaskHolder = document.getElementById('incomplete-tasks');//ul of #incomplete-tasks
-var completedTasksHolder = document.getElementById('completed-tasks');//completed-tasks
+var taskInput = document.getElementById('new-task');
+var addButton = document.getElementsByTagName('button')[0];
+var incompleteTaskHolder = document.getElementById('incomplete-tasks');
+var completedTasksHolder = document.getElementById('completed-tasks');
 
 var createNewTaskElement = function(taskString) {
   var listItem = document.createElement('li');
@@ -32,7 +32,7 @@ var createNewTaskElement = function(taskString) {
 }
 
 var addTask = function() {
-  var listItem=createNewTaskElement(taskInput.value);
+  var listItem = createNewTaskElement(taskInput.value);
 
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
